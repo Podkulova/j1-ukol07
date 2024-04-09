@@ -3,20 +3,16 @@ package cz.czechitas.ukol07;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Kniha {
-    @JsonProperty("autor")
-    public String autor;
-    @JsonProperty("nazev")
-    public String nazev;
-    @JsonProperty("rok_vydani")
-    public int rokVydani;
+    private String nazev;
+    private String autor;
+    private int rokVydani;
 
-    public Kniha() {
+    public String getNazev() {
+        return nazev;
     }
 
-    public Kniha(String autor, String nazev, int rokVydani) {
-        this.autor = autor;
+    public void setNazev(String nazev) {
         this.nazev = nazev;
-        this.rokVydani = rokVydani;
     }
 
     public String getAutor() {
@@ -27,14 +23,6 @@ public class Kniha {
         this.autor = autor;
     }
 
-    public String getNazev() {
-        return nazev;
-    }
-
-    public void setNazev(String nazev) {
-        this.nazev = nazev;
-    }
-
     public int getRokVydani() {
         return rokVydani;
     }
@@ -42,6 +30,4 @@ public class Kniha {
     public void setRokVydani(int rokVydani) {
         this.rokVydani = rokVydani;
     }
-
-
 }
